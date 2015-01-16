@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20150116193309) do
 
   create_table "reqs", force: :cascade do |t|
     t.string   "name"
+    t.string   "department"
     t.text     "email"
     t.text     "message"
     t.datetime "created_at", null: false

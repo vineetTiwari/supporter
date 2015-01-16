@@ -4,6 +4,7 @@
 <% @reqs.each do |req|%>
 <p> Name: <%= req.name %></p>
 <p> Email: <%= req.email %></p>
+<p> Department: <%= req.department %></p>
 <p> Message: <%= req.message %></p>
 <%= link_to "Show", req_path(req) %>
 <% end %>

@@ -35,15 +35,15 @@ class ReqsController < ApplicationController
   end
 
   def destroy
-    @req = req.find params[:id]
+    @req = Req.find params[:id]
     @req.destroy
-    redirect_to req_path
+    redirect_to reqs_path
   end
 
   private
 
     def req_params
-      params.require(:req).permit(:name, :email, :message)
+      params.require(:req).permit(:name, :email, :department, :message)
     end
 
 end

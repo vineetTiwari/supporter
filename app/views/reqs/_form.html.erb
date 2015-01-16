@@ -9,15 +9,17 @@
 
 <%= form_for @req do |f| %>
   <%= f.label :name %>
-  <br>
   <%= f.text_field :name %>
   <br>
   <%= f.label :email %>
-  <br>
   <%= f.email_field :email %>
   <br>
-  <%= f.label :message %>
+  <% Req::DEPARTMENTS.each do |dept| %>
+     <%= f.label :department, dept %>
+     <%= f.radio_button(:department, dept) %>
+  <% end %>
   <br>
+  <%= f.label :message %>
   <%= f.text_area :message %>
   <br>
   <%= f.submit %>

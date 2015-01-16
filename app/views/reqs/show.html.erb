@@ -1,6 +1,7 @@
-<h3>Name:</h3><h1><%= @req.name %></h1>
-<h3>Email:</h3><h2><%= @req.email %></h2>
-<h3>Message:</h3><h3><%= @req.message %></h3>
+<h3>Name: <%= @req.name %></h3>
+<h3>Email: <%= @req.email %></h3>
+<h3>Department <%= @req.department %></h3>
+<h3>Message: <%= @req.message %></h3>
 <p><%= link_to "Edit", edit_req_path(@req) %> &nbsp <%= link_to "Delete", req_path(@req), 
 method: :delete, data: {confirm: "Click OK to delete"} %>
 </p>
